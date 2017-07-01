@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+\begin{axis}[
+    width=9cm,height=6cm,
+    ymin=0,
+    ytick align=outside,
+    axis x line*=bottom,axis y line*=left,
+    tick label style={
+        /pgf/number format/assume math mode=true,
+        /pgf/number format/1000 sep={}
+    },
+    ylabel={\# citations},
+    % enlargelimits=0.15,
+    ybar,
+    bar width=12pt,
+]
+\addplot[
+    fill=lightgray,
+    nodes near coords,
+    every node near coord/.append style={
+        /pgf/number format/assume math mode=true,
+        font=\small
+    }
+]
+    coordinates{
+        (2010,2)
+        (2011,7)
+        (2012,23)
+        (2013,52)
+        (2014,74)
+        (2015,93)
+        (2016,126)
+        (2017,128)
+    };
+
+\end{axis}
+\end{tikzpicture}

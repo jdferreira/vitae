@@ -1,0 +1,27 @@
+\nocite{*}
+
+\defbibheading{bibliography}{
+    \section{Full publication list} \label{sec:publications}
+}
+
+\printbibheading[heading=bibliography]
+
+\printbibliography[
+    title={Journal papers},
+    type=article,
+    heading=subbibnumbered]
+
+\printbibliography[
+    title={Conferences (oral presentations \& posters)},
+    type=inproceedings,
+    heading=subbibnumbered]
+
+\printbibliography[
+    title={Thesis (see section~\ref{sec:education})},
+    type=thesis,
+    heading=subbibnumbered]
+    
+\printbibliography[
+    title={Other},
+    nottype=article,nottype=inproceedings,nottype=thesis,
+    heading=subbibnumbered]

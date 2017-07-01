@@ -20,6 +20,7 @@
 \LoadClass[11pt,a4paper]{article}
 
 % Load some packages that will be needed
+\RequirePackage{microtype}
 \RequirePackage{array}
 \RequirePackage{enumitem}
 \RequirePackage{geometry}
@@ -33,7 +34,7 @@
 \RequirePackage{fontawesome}
 \RequirePackage{lastpage}
 \RequirePackage[explicit]{titlesec}
-\RequirePackage[defernumbers=true,sorting=ydnt]{biblatex}
+\RequirePackage[defernumbers=true,sorting=ydnt,backend=biber]{biblatex}
 \RequirePackage{xparse}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
@@ -128,8 +129,9 @@
 \setmonofont[
   Path=fonts/,
   Scale=0.9,
-  UprightFont=*-Regular
-]{SourceCodePro}
+  UprightFont=*-Regular,
+  SmallCapsFont=*-Regular
+]{Lekton}
 
 % Commands to set personal information
 \def\make@command#1{
@@ -230,7 +232,7 @@
   \@firstsocialtrue
   \if@mobile\social@sep\faMobile\vitae@icon@delim\@mobile\fi
   \if@email\social@sep\faEnvelope\vitae@icon@delim\href{mailto:\@email}{\@email}\nobreak\fi
-  \if@homepage\social@sep\faHome\vitae@icon@delim\href{\@homepage}{\@homepage}\nobreak\fi
+  \if@homepage\social@sep\faHome\vitae@icon@delim{\renewcommand\UrlFont{\headerfont}\url{\@homepage}}\nobreak\fi
   \@firstsocialtrue\break
   \if@researchgate\social@sep \textbf{R\textsuperscript{G}}\vitae@icon@delim\href{https://www.researchgate.net/profile/\@researchgate}{\@researchgate}\nobreak\fi
   \if@orcid\social@sep\textbf{ORCID}\vitae@icon@delim\href{https://orcid.org/\@orcid}{\@orcid}\nobreak\fi

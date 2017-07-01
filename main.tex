@@ -1,0 +1,40 @@
+\documentclass{vitae}
+
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+
+\firstname{João D.}
+\lastname{Ferreira}
+\address{R. das Flores, nº 7 -- 1º dto, 2810-218 Laranjeiro, Portugal}
+\position{Computer Scientist$\quad\cdot\quad$Bioinformatician}
+
+\mobile{(+351)~96~323~50~69}
+\email{jdferreira@fc.ul.pt}
+\homepage{http://webpages.fc.ul.pt/~jdferreira}
+\github{jdferreira}
+\stackoverflow{462339/jdferreira}
+\orcid{0000-0002-6900-3168}
+
+\authorhash{bb14ea92253e36baf862afe26b473353} % Extracted from the .bbl file
+\addbibresource{content/references.bib}
+% \addbibresource{content/other.bib}
+
+\makeatletter
+\newcommand\nobreakhere{\par\nobreak\@afterheading}
+\makeatother
+
+\begin{document}
+
+\makeheader
+
+\input{content/00-summary}
+\include{content/01-scientific-performance}
+\include{content/02-pedagogical-performance}
+\include{content/03-university-mission}
+\include{content/04-ongoing-research}
+\include{content/05-publications}
+\include{content/06-education}
+
+\end{document}
